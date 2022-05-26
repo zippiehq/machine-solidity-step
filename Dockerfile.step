@@ -32,4 +32,4 @@ COPY ./contracts ./contracts
 COPY ./deploy ./deploy
 COPY ./deploy_step_tests.sh .
 
-ENTRYPOINT ["ganache-cli"]
+ENTRYPOINT ["ganache-cli", "--host", "0.0.0.0"]
