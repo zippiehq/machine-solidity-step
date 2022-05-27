@@ -31,5 +31,6 @@ RUN pip3 install -r requirements.txt
 COPY ./contracts ./contracts
 COPY ./deploy ./deploy
 COPY ./deploy_step_tests.sh .
+COPY ./entrypoint-step.sh .
 
-ENTRYPOINT ["ganache-cli", "--host", "0.0.0.0"]
+CMD ["sh", "./entrypoint-step.sh"]
